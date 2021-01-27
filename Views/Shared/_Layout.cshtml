@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Erick Vargas</title>
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/img/faviconis.ico">
+</head>
+<body>
+    <div class="header">
+        <!--Using razor code-->
+        <hi>@ViewBag.Title</hi>
+    </div>
+
+    @RenderBody()
+
+
+    <div class="footer">
+        <!--Making menu with cool Jquery-->
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="GPACalculator">GPA Calculator</a>
+    </div>
+
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/JavaScript.js"></script>
+</body>
+
+</html>

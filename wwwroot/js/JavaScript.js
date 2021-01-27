@@ -1,14 +1,11 @@
-﻿//variable to get data from from
-var submit = document.getElementById("submitButton");
-
-//form function to calculate grade
-submit.addEventListener("click", function () {
+﻿//form function to calculate grade
+$("#submitButton").click(function () {
     //getting value from form
-    assignments = document.getElementById("assignments").value
-    group_project = document.getElementById("group_project").value
-    exams = document.getElementById("exams").value
-    quizzes = document.getElementById("quizzes").value
-    intex = document.getElementById("intex").value
+    assignments = $("#assignments").val()
+    group_project = $("#group_project").val()
+    exams = $("#exams").val()
+    quizzes = $("#quizzes").val()
+    intex = $("#intex").val()
 
     //getting weighted scored
     assignments = assignments * .50
@@ -21,37 +18,37 @@ submit.addEventListener("click", function () {
     letterGrade = ''
 
     //conditional statement to figure out letter grade
-    if (total >= .94) {
+    if (total >= 94) {
         letterGrade = 'A'
     }
-    else if (total < .94 && total >= .90) {
+    else if (total < 94 && total >= 90) {
         letterGrade = 'A-'
     }
-    else if (total < .90 && total >= .87) {
+    else if (total < 90 && total >= 87) {
         letterGrade = 'B+'
     }
-    else if (total < .87 && total >= .84) {
+    else if (total < 87 && total >= 84) {
         letterGrade = 'B'
     }
-    else if (total < .84 && total >= .80) {
+    else if (total < 84 && total >= 80) {
         letterGrade = 'B-'
     }
-    else if (total < .80 && total >= .77) {
+    else if (total < 80 && total >= 77) {
         letterGrade = 'C+'
     }
-    else if (total < .77 && total >= .74) {
+    else if (total < 77 && total >= 74) {
         letterGrade = 'C'
     }
-    else if (total < .74 && total >= .70) {
+    else if (total < 74 && total >= 70) {
         letterGrade = 'C-'
     }
-    else if (total < .70 && total >= .67) {
+    else if (total < 70 && total >= 67) {
         letterGrade = 'D+'
     }
-    else if (total < .67 && total >= .64) {
+    else if (total < 67 && total >= 64) {
         letterGrade = 'D'
     }
-    else if (total < .64 && total >= .60) {
+    else if (total < 64 && total >= 60) {
         letterGrade = 'D-'
     }
     else {
